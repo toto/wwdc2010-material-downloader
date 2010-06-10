@@ -24,8 +24,6 @@ else
   'wwdc2010-assets'
 end
 
-p dl_dir
-
 # Creates the given directory if it doesn't exist already.
 def mkdir(dir)
   Dir.mkdir dir unless File.exists?(dir)
