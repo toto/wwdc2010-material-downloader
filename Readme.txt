@@ -4,8 +4,8 @@ You'll need ruby and the mechanize and json ruby gems. You can install them like
 sudo gem install mechanize json
 
 You simply run the script like this: 
-ruby wwdc2010downloader.rb <your Apple ID> <your ADC Password>
+ruby wwdc2010downloader.rb <your Apple ID> <your ADC Password> [<target-dir>]
 
-The script will create a directory called "wwdc2010-assets" in the directory you run the script from.
+The script will create a directory called "wwdc2010-assets" (or <target-dir> if given) in the directory you run the script from.
 
 That's it. Enjoy and see you next year.

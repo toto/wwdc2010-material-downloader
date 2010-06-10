@@ -12,12 +12,17 @@ puts "See you next year!"
 puts
 
 if ARGV.size < 2
-  puts "Usage: ruby wwdc2010downloader.rb <your Apple ID> <your ADC Password>"
+  puts "Usage: ruby wwdc2010downloader.rb <your Apple ID> <your ADC Password> [<target-dir>]"
   exit
 end
 
 base_uri = 'https://developer.apple.com/wwdc/scripts/services.php?format=json&type='
-dl_dir = 'wwdc2010-assets'
+
+dl_dir = if ARGV.size > 2 
+  ARGV.last
+else
+  'wwdc2010-assets'
+end
 
 # Creates the given directory if it doesn't exist already.
 def mkdir(dir)
