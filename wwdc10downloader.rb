@@ -24,6 +24,8 @@ else
   'wwdc2010-assets'
 end
 
+p dl_dir
+
 # Creates the given directory if it doesn't exist already.
 def mkdir(dir)
   Dir.mkdir dir unless File.exists?(dir)
@@ -63,7 +65,7 @@ end
   
   # get the files
   if success
-    dirname = "wwdc2010-assets/#{session}-#{title.gsub(/\/|&|!/, '')}" 
+    dirname = "#{dl_dir}/#{session}-#{title.gsub(/\/|&|!/, '')}" 
     puts "  Creating #{dirname}"
     mkdir(dirname)
     a.get("#{base_uri}docs&session=#{session}") do |page|
